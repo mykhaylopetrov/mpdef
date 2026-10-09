@@ -1,0 +1,29 @@
+.header {
+    background-color: var(--default-header-background-color);
+    transition: all 0.3s ease-out;
+}
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	min-height: 350px;
+	margin-bottom: 24px;
+	padding-top: 100px;
+	background-color: var(--hero-section-default-background-color);
+}
+
+.hero__title {
+	font-family: 'Poppins-SemiBold', Helvetica, Arial, sans-serif;
+	font-size: 32px;
+	color: var(--default-hero-title-color);
+	text-align: center;
+}
+
+h2 {
+	margin-bottom: 16px;
+	font-family: 'Poppins-SemiBold', Helvetica, Arial, sans-serif;
+	font-size: 24px;
+	color: var(--default-title-section-color);
+}
