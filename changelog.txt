@@ -1,2 +1,5 @@
 1.0.0: 09-10-2026
 - New: First release.
+
+1.0.1: 12-10-2026
+- Fix: Removed code that is not related to the WordPress theme.

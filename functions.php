@@ -123,6 +123,3 @@ if ( ! function_exists( 'mpdef_render_menu' ) ) {
 }
 
 require_once MPDEF_PATH . '/inc/template-functions.php';
-require_once MPDEF_PATH . '/inc/seo.php';
-require_once MPDEF_PATH . '/inc/optimize.php';
-require_once MPDEF_PATH . '/inc/security.php';
