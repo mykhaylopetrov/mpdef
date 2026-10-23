@@ -200,7 +200,7 @@ section {
 	background-color: #ccc;
 }
 
-.faq__question:after {
+.faq__question::after {
 	margin-left: 5px;
 	content: url("data:image/svg+xml;charset=UTF-8,<svg width='20' height='12' viewBox='0 0 20 12' xmlns='http://www.w3.org/2000/svg'><path d='M3.50002 0.799805L10 7.2998L16.5 0.799805L19.1 2.0998L10 11.1998L0.900024 2.0998L3.50002 0.799805Z' fill='%23000000'/></svg>");
 	transition: all 0.4s ease 0s;
@@ -208,19 +208,23 @@ section {
 	font-weight: bold;
 }
 
-.faq__question.active:after {
+.faq__question.active::after {
 	content: url("data:image/svg+xml;charset=UTF-8,<svg width='20' height='12' viewBox='0 0 20 12' xmlns='http://www.w3.org/2000/svg'><path d='M3.50002 0.799805L10 7.2998L16.5 0.799805L19.1 2.0998L10 11.1998L0.900024 2.0998L3.50002 0.799805Z' fill='%23000000'/></svg>");
 	transform: rotate(180deg);
 	transition: all 0.4s ease 0s;
 }
 
 .faq__answer {
-	max-height: 0;
-	padding: 0 18px;
-	
-	background-color: white;
+	max-height: 0px;
+	padding-right: 16px;
+	padding-left: 16px;
+	background-color: #ffffff;
 	overflow: hidden;
 	transition: all 0.4s ease 0s;
+}
+
+.faq__answer > *:first-of-type {
+	padding-top: 16px;
 }
 
 /* /.FAQ */
