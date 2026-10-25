@@ -21,6 +21,8 @@
 	--default-font-family: Arial, Helvetica, sans-serif;
     --font-family: 'Poppins-Regular', Helvetica, Arial, sans-serif;
 	--default-font-size: 16px;
+
+    --footer-background-color: #000000;
 }
 
 /* ============= /.GLOBAL VARS =========== */
@@ -552,6 +554,21 @@ ol li {
 
 /* FOOTER */
 
+.footer {
+    margin-top: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: var(--footer-background-color);
+}
+
+.footer p {
+    margin-bottom: 0px;
+}
+
+/* /.FOOTER */
+
 /* Scroll To Top Button */
 
 .scrollToTopBtn {
@@ -581,5 +598,3 @@ ol li {
 }
 
 /* end___Scroll To Top Button */
-
-/* /.FOOTER */
