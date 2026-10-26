@@ -94,8 +94,19 @@ html:has(.contact-dialog[open]) {
 }
 
 .btn:hover {
-	background-color: #333;
-  	color: #fff;
+	background-color: #333333;
+  	color: #ffffff;
+    transition: all 0.3s;
+}
+
+.btn.btn--home {
+    color: #000000;
+    border: 1px solid #000000;
+    transition: all 0.3s;
+}
+.btn.btn--home:hover {
+    color: #ffffff;
+    transition: all 0.3s;
 }
 
 /* HEADER */
@@ -546,30 +557,47 @@ html:has(.contact-dialog[open]) {
     }
 }
 
+.main h2 {
+	margin-bottom: 16px;
+	font-family: 'Poppins-SemiBold', Helvetica, Arial, sans-serif;
+	font-size: 24px;
+	color: var(--default-title-section-color);
+}
+
 /* /.MAIN */
 
 /* 404 Page */
 
 .error404 .header {
-    position: initial;
+    background-color: var(--default-header-background-color);
+    transition: all 0.3s ease-out;
 }
 
-.error404 .header__menu a {
-    color: #000000;
+.error404 .error-404 {
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	min-height: 90vh;
+	margin-bottom: 24px;
+	padding-top: 100px;
+	/* background-color: var(--hero-section-default-background-color); */
 }
 
-.error404 .header__menu .sub-menu a {
-    color: #ffffff;
+.error404 .error-404 .error-404__title {
+    font-family: 'Poppins-SemiBold', Helvetica, Arial, sans-serif;
+	font-size: 32px;
+	color: var(--default-title-section-color);
+	text-align: center;
 }
 
-@media (min-width: 992px) {
-    .error404 .header__menu > ul > li > a {
-        background-image: linear-gradient(#000000, #000000);
-    }
+.error404 .error-404 .error-404__subtitle {
+    margin-top: 32px;
 }
 
-.error404 .header__menu .sub-menu span {
-    background-image: linear-gradient(#000000, #000000);
+.error404 .error-404 .error-404__btn {
+    margin-top: 32px;
+    text-align: center;
 }
 
 /* /.404 Page */
