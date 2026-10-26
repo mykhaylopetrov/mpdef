@@ -7,6 +7,7 @@
         </footer>
 
         <?php get_template_part( 'template-parts/footer/scroll-to-top-button' ); ?>
+        <?php get_template_part( 'template-parts/footer/contact-dialog' ); ?>
 
     </div><!-- /.wrapper -->
 

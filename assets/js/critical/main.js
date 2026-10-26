@@ -62,6 +62,44 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /**
+ * Contact Dialog
+ */
+document.addEventListener('DOMContentLoaded', function () {
+    const dialog = document.getElementById('contact-dialog');
+
+    if (!dialog || typeof dialog.showModal !== 'function') {
+        return;
+    }
+
+    document.querySelectorAll('.btn--contact-us').forEach(function (button) {
+        button.addEventListener('click', function () {
+            if (!dialog.open) {
+                dialog.showModal();
+                document.documentElement.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    const closeButton = dialog.querySelector('[data-contact-dialog-close]');
+
+    if (closeButton) {
+        closeButton.addEventListener('click', function () {
+            dialog.close();
+        });
+    }
+
+    dialog.addEventListener('close', function () {
+        document.documentElement.style.overflow = '';
+    });
+
+    dialog.addEventListener('click', function (event) {
+        if (event.target === dialog) {
+            dialog.close();
+        }
+    });
+});
+
+/**
  * Scroll To Top Button
  */
 document.addEventListener("scroll", handleScroll);

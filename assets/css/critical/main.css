@@ -611,3 +611,54 @@ ol li {
 }
 
 /* end___Scroll To Top Button */
+
+/* Contact Dialog */
+
+.contact-dialog {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    box-sizing: border-box;
+    width: min(480px, calc(100vw - 30px));
+    max-height: calc(100vh - 40px);
+    max-height: calc(100dvh - 40px);
+    padding: 32px 28px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    border: none;
+    border-radius: 12px;
+    color: var(--default-main-color);
+}
+
+html:has(.contact-dialog[open]) {
+    overflow: hidden;
+}
+
+.contact-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.contact-dialog__close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    padding: 4px 8px;
+    font-size: 24px;
+    line-height: 1;
+    color: inherit;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-dialog__title {
+    margin-bottom: 12px;
+    color: var(--default-title-section-color);
+}
+
+.contact-dialog__text {
+    margin-bottom: 0;
+}
+
+/* /.Contact Dialog */
