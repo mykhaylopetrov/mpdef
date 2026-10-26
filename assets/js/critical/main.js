@@ -71,11 +71,31 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
     }
 
+    /*
+     * Блокування скролу БЕЗ стрибка.
+     * scrollbar-gutter: stable (див. CSS) вже прибирає стрибок у сучасних браузерах.
+     * Компенсація padding-right — фолбек для старих браузерів без scrollbar-gutter.
+     */
+    function lockScroll() {
+        const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+        if (scrollBarWidth > 0) {
+            document.documentElement.style.paddingRight = scrollBarWidth + 'px';
+        }
+
+        document.documentElement.classList.add('modal-open');
+    }
+
+    function unlockScroll() {
+        document.documentElement.classList.remove('modal-open');
+        document.documentElement.style.paddingRight = '';
+    }
+
     document.querySelectorAll('.btn--contact-us').forEach(function (button) {
         button.addEventListener('click', function () {
             if (!dialog.open) {
                 dialog.showModal();
-                document.documentElement.style.overflow = 'hidden';
+                lockScroll();
             }
         });
     });
@@ -89,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     dialog.addEventListener('close', function () {
-        document.documentElement.style.overflow = '';
+        unlockScroll();
     });
 
     dialog.addEventListener('click', function (event) {

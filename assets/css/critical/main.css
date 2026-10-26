@@ -46,6 +46,15 @@ body {
 	color: var(--default-main-color);
 }
 
+html {
+    scrollbar-gutter: stable;
+}
+
+html.modal-open,
+html:has(.contact-dialog[open]) {
+    overflow: hidden;
+}
+
 p {
 	margin-bottom: 16px;
 	line-height: 1.5;
@@ -629,10 +638,6 @@ ol li {
     border: none;
     border-radius: 12px;
     color: var(--default-main-color);
-}
-
-html:has(.contact-dialog[open]) {
-    overflow: hidden;
 }
 
 .contact-dialog::backdrop {
