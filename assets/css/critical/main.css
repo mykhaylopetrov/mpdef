@@ -55,43 +55,6 @@ html:has(.contact-dialog[open]) {
     overflow: hidden;
 }
 
-p {
-	margin-bottom: 16px;
-	line-height: 1.5;
-}
-
-ul li {
-    margin-bottom: 15px;
-    margin-left: 20px;
-    list-style: disc;
-}
-@media (max-width: 991.98px) {
-    ul li {
-        margin-left: 32px;
-    }
-}
-@media (max-width: 575.98px) {
-    ul li {
-        margin-bottom: 10px;
-    }
-}
-
-ol li {
-    margin-bottom: 15px;
-    margin-left: 20px;
-    list-style: decimal;
-}
-@media (max-width: 991.98px) {
-    ol li {
-        margin-left: 32px;
-    }
-}
-@media (max-width: 575.98px) {
-    ol li {
-        margin-bottom: 10px;
-    }
-}
-
 .wrapper {
 	min-height: 100%;
     display: flex;
@@ -544,6 +507,43 @@ ol li {
 
 .main {
 	position: relative;
+}
+
+.main p {
+	margin-bottom: 16px;
+	line-height: 1.5;
+}
+
+.main ul li {
+    margin-bottom: 15px;
+    margin-left: 20px;
+    list-style: disc;
+}
+@media (max-width: 991.98px) {
+    .main ul li {
+        margin-left: 32px;
+    }
+}
+@media (max-width: 575.98px) {
+    .main ul li {
+        margin-bottom: 10px;
+    }
+}
+
+.main ol li {
+    margin-bottom: 15px;
+    margin-left: 20px;
+    list-style: decimal;
+}
+@media (max-width: 991.98px) {
+    .main ol li {
+        margin-left: 32px;
+    }
+}
+@media (max-width: 575.98px) {
+    .main ol li {
+        margin-bottom: 10px;
+    }
 }
 
 /* /.MAIN */
